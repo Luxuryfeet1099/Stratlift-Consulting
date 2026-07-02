@@ -349,7 +349,6 @@ h3,
 nav a,
 .contact-box a,
 .footer-links a {
-    color: #d4af37 !important;
 }
 
 body {
@@ -370,10 +369,6 @@ p {
     color: #050505 !important;
 }
 .hero h1 {
-    color: #d4af37 !important;
-}
-
-.logo {
     color: #d4af37 !important;
 }
 
