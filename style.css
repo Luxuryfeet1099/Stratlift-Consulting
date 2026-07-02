@@ -96,7 +96,11 @@ header {
     height: 32px !important;
     width: auto;
     display: block;
+    transition: transform 0.3s ease;
 }
+
+.logo img:hover {
+    transform: scale(1.03);
 }
 
 nav {
@@ -344,21 +348,25 @@ footer {
 
 /* FORCE GOLD */
 
-.logo,
 h1,
 h2,
 h3,
 nav a,
 .contact-box a,
 .footer-links a {
+    color: #d4af37 !important;
 }
 
 body {
-    background: #050505 !important;
+    background: #050505;
 }
 
 p {
-    color: #e0e0e0 !important;
+    color: #e0e0e0;
+}
+
+.hero h1 {
+    color: #d4af37 !important;
 }
 
 .cta {
@@ -369,16 +377,4 @@ p {
 .cta:hover {
     background: #d4af37 !important;
     color: #050505 !important;
-}
-.hero h1 {
-    color: #d4af37 !important;
-}
-
-nav a {
-    color: #d4af37 !important;
-}
-
-h2,
-h3 {
-    color: #d4af37 !important;
 }
