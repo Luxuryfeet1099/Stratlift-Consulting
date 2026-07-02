@@ -339,7 +339,35 @@ footer {
     .hero p {
         font-size: 1rem;
     }
+/* FORCE GOLD */
 
+.logo,
+h1,
+h2,
+h3,
+nav a,
+.contact-box a,
+.footer-links a {
+    color: #d4af37 !important;
+}
+
+body {
+    background: #050505 !important;
+}
+
+p {
+    color: #e0e0e0 !important;
+}
+
+.cta {
+    color: #d4af37 !important;
+    border: 1px solid #d4af37 !important;
+}
+
+.cta:hover {
+    background: #d4af37 !important;
+    color: #050505 !important;
+}
     .contact-box {
         padding: 30px;
     }
