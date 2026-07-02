@@ -93,8 +93,10 @@ header {
 }
 
 .logo img {
-    height: 10 px;
+    height: 32px;
     width: auto;
+    display: block;
+}
 }
 
 nav {
