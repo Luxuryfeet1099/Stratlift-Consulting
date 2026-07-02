@@ -92,11 +92,10 @@ header {
     border-bottom: 1px solid var(--border);
 }
 
-.logo {
-    color: var(--gold);
-    font-size: 1.5rem;
-    letter-spacing: 4px;
-    font-family: 'Cormorant Garamond', serif;
+.logo img {
+    height: 65px;
+    width: auto;
+    display: block;
 }
 
 nav {
