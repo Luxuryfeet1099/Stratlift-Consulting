@@ -1,4 +1,4 @@
-// Language Switcher
+// Language Switcher 
 
 const langButton = document.getElementById("lang-toggle");
 
