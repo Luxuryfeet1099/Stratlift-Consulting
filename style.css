@@ -369,7 +369,19 @@ p {
     background: #d4af37 !important;
     color: #050505 !important;
 }
-    .contact-box {
-        padding: 30px;
-    }
+.hero h1 {
+    color: #d4af37 !important;
+}
+
+.logo {
+    color: #d4af37 !important;
+}
+
+nav a {
+    color: #d4af37 !important;
+}
+
+h2,
+h3 {
+    color: #d4af37 !important;
 }
