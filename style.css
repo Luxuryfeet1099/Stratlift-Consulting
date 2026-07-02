@@ -1,1 +1,346 @@
+/* =========================================
+   STRATLIFT CONSULTING WIESEMANN
+   Luxury Boutique Consulting Theme
+========================================= */
 
+:root {
+    --gold: #d4af37;
+    --gold-light: #f1d87a;
+    --black: #050505;
+    --black-soft: #0f0f0f;
+    --grey: #9b9b9b;
+    --white: #ffffff;
+    --border: rgba(212, 175, 55, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    color: var(--gold);
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #d0d0d0;
+    font-size: 1.05rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gold);
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: var(--gold-light);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 24px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(15px);
+    background: rgba(5, 5, 5, 0.75);
+    border-bottom: 1px solid var(--border);
+}
+
+.logo {
+    color: var(--gold);
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: white;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+#lang-toggle {
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold);
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#lang-toggle:hover {
+    background: var(--gold);
+    color: black;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 8%;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.75),
+            rgba(0,0,0,0.85)
+        ),
+        url("assets/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    animation: fadeUp 1s ease;
+}
+
+.hero p {
+    margin-top: 35px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+    max-width: 700px;
+}
+
+.cta {
+    display: inline-block;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 16px 32px;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.35s ease;
+}
+
+.cta:hover {
+    background: var(--gold);
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+section {
+    padding: 120px 8%;
+}
+
+#services {
+    background: var(--black-soft);
+}
+
+/* =========================================
+   SERVICE CARDS
+========================================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.card {
+    padding: 40px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.02);
+    transition: all 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 20px 60px rgba(212,175,55,0.12);
+}
+
+.card h3 {
+    color: var(--gold);
+}
+
+/* =========================================
+   ABOUT
+========================================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-grid img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: 0.4s ease;
+}
+
+.about-grid img:hover {
+    transform: scale(1.02);
+}
+
+.about-grid p {
+    font-size: 1.15rem;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-box {
+    border: 1px solid var(--border);
+    padding: 50px;
+    max-width: 700px;
+    background: rgba(255,255,255,0.02);
+}
+
+.contact-box p {
+    margin-bottom: 15px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    border-top: 1px solid var(--border);
+    text-align: center;
+    padding: 40px;
+}
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    margin: 0 15px;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    section {
+        padding: 80px 6%;
+    }
+
+    header {
+        padding: 20px 6%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav a {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .contact-box {
+        padding: 30px;
+    }
+}
