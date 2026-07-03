@@ -1,75 +1,26 @@
-// ======================================
-// STRATLIFT CONSULTING
-// Language Switcher
-// ======================================
-
 const button = document.getElementById("lang-toggle");
 
-let lang = localStorage.getItem("lang") || "de";
+let lang = "de";
 
-function applyLanguage() {
+button.addEventListener("click", () => {
 
-    if (button) {
-        button.textContent = lang === "de" ? "EN" : "DE";
-    }
+    lang = lang === "de" ? "en" : "de";
+
+    button.textContent =
+        lang === "de"
+        ? "EN"
+        : "DE";
+
+    document.documentElement.lang = lang;
 
     document.querySelectorAll("[data-de]").forEach(el => {
 
-        const translation =
-            lang === "de"
-                ? el.dataset.de
-                : el.dataset.en;
-
-        if (translation) {
-            el.textContent = translation;
+        if (lang === "de") {
+            el.innerHTML = el.dataset.de;
+        } else {
+            el.innerHTML = el.dataset.en;
         }
 
     });
-
-}
-
-if (button) {
-
-    button.addEventListener("click", () => {
-
-        lang = lang === "de" ? "en" : "de";
-
-        localStorage.setItem("lang", lang);
-
-        applyLanguage();
-
-    });
-
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    applyLanguage();
-
-});
-
-// ======================================
-// Scroll Animation
-// ======================================
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach(entry => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-
-    });
-
-}, {
-    threshold: 0.15
-});
-
-document.querySelectorAll("section").forEach(section => {
-
-    section.classList.add("hidden");
-
-    observer.observe(section);
 
 });
