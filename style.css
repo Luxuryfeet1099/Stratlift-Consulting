@@ -93,7 +93,7 @@ header {
 }
 
 .logo img {
-    height: 70px !important;
+    height: 80px !important;
     width: auto;
     display: block;
     transition: transform 0.3s ease;
